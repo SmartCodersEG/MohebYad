@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="36dp"
+        app:cardElevation="0dp">
+
+
+        <RelativeLayout
+            android:id="@+id/btncolor"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:layout_gravity="center"
+            android:background="@drawable/main_bg"
+            android:clickable="false"
+            android:elevation="3dp"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:orientation="vertical"
+            tools:ignore="UnusedAttribute"
+            tools:targetApi="m">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/coverbg"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="10dp"
+                android:clickable="false"
+                android:contentDescription="@string/todo"
+                android:visibility="visible"
+                app:srcCompat="@drawable/ic_category"
+                app:tint="#FFFFFF" />
+
+
+            <TextView
+                android:id="@+id/adText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="3dp"
+                android:layout_marginEnd="3dp"
+                android:layout_toStartOf="@+id/linkicon"
+                android:layout_toEndOf="@+id/coverbg"
+                android:ellipsize="marquee"
+                android:fontFamily="@font/cbold"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:paddingStart="0dp"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:text="A long and boring application description"
+                android:textColor="#ffffff"
+                android:textSize="12.0sp"
+                tools:ignore="SmallSp"
+                tools:targetApi="jelly_bean">
+
+                <requestFocus
+                    android:duplicateParentState="true"
+                    android:focusable="true"
+                    android:focusableInTouchMode="false" />
+            </TextView>
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/ic_link"
+                android:clickable="false"
+                android:contentDescription="@string/todo"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:id="@+id/linkicon"
+                android:layout_width="65dp"
+                android:layout_height="32dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerInParent="true"
+                android:layout_marginEnd="8dp">
+
+                <com.google.android.material.button.MaterialButton
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:clickable="false"
+                    app:cornerRadius="18dp"
+                    app:strokeColor="#FFFFFF"
+                    app:strokeWidth="1dp" />
+
+                <TextView
+                    android:id="@+id/btnactiontext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="view more"
+                    android:textColor="#FFFFFF"
+                    android:textSize="@dimen/text_size_10"
+                    android:visibility="visible" />
+
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:visibility="gone">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/appIcon"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:adjustViewBounds="true"
+                android:background="#00444444"
+                android:elevation="3.5dp"
+                android:visibility="gone"
+                app:shapeAppearance="@style/roundedImageView3ad"
+                app:strokeColor="#f1f1f1"
+                app:strokeWidth="1dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/recomended_card_bg"
+                android:elevation="4dp"
+                android:gravity="center_vertical"
+                android:paddingStart="6dp"
+                android:paddingEnd="6dp"
+                android:text="@string/recomended"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/text_size_10"
+                android:visibility="gone"
+                tools:ignore="RelativeOverlap" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/inflay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/coverbg">
+
+            <TextView
+                style="@style/Base.Widget.AppCompat.Button.Borderless"
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:layout_gravity="center"
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/ic_verifiedtop"
+                android:clickable="false"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/apptitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="Pubg Mobile New Era"
+                android:textColor="#303038"
+                android:textSize="@dimen/text_size_12"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/cat"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_below="@+id/inflay"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@+id/coverbg"
+            android:background="@drawable/ic_category"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/appcategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/inflay"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="10dp"
+            android:layout_toEndOf="@+id/cat"
+            android:maxLines="1"
+            android:text="Action . Shooter"
+            android:textColor="#8A1C1C"
+            android:textSize="@dimen/text_size_10"
+            android:visibility="gone" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/sizic"
+            style="@style/Base.Widget.AppCompat.Button.Borderless"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_below="@+id/inflay"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@+id/appcategory"
+            android:background="@drawable/ic_sizeic"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/appsize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/inflay"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@+id/sizic"
+            android:maxLines="1"
+            android:text="1.64GB"
+            android:textColor="#279595"
+            android:textSize="@dimen/text_size_10"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/apprating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_gravity="center"
+            android:background="@drawable/rating_card_bg"
+            android:drawableStart="@drawable/ic_star_icon"
+            android:drawablePadding="2dp"
+            android:elevation="0dp"
+            android:gravity="center_vertical"
+            android:paddingStart="4dp"
+            android:paddingTop="1.5dp"
+            android:paddingEnd="7dp"
+            android:paddingBottom="1.5dp"
+            android:text=" 3.6"
+            android:textColor="#000000"
+            android:textSize="@dimen/text_size_12"
+            android:textStyle="bold"
+            android:visibility="gone"
+            tools:ignore="UseCompatTextViewDrawableXml" />
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>

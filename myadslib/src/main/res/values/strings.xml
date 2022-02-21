@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name" translatable="false">MyAdsLib</string>
+    <string name="todo" translatable="false">TODO</string>
+    <string name="ad">ad</string>
+    <string name="adprivacyurl" translatable="false">https://www.youtube.com/</string>
+    <string name="no_thanks">No, Thanks</string>
+    <string name="skip_ad">Skip Ad</string>
+    <string name="recomended">RECOMENDED</string>
+</resources>
