@@ -17,7 +17,7 @@
         <RelativeLayout
             android:id="@+id/btncolor"
             android:layout_width="match_parent"
-            android:layout_height="33dp"
+            android:layout_height="36dp"
             android:layout_gravity="center"
             android:background="@drawable/main_bg"
             android:clickable="false"
